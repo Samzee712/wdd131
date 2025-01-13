@@ -16,7 +16,8 @@ a {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 500;
     background-color: #f8f9fa;
     color: #212529;
     line-height: 1.6;
@@ -31,8 +32,8 @@ header {
 }
 
 header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-family: "Roboto Condensed", serif;
+    font-weight: 400;
 }
 
 header h1 span {
@@ -113,6 +114,7 @@ main {
 .location {
     margin-top: 20px;
     text-align: left;
+
 }
 
 .location img {
