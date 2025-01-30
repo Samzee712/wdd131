@@ -31,12 +31,11 @@
         </section>
 
         <section class="image">
-            <img src="images/paris.webp"   
-            srcset="images/paris.webp"   
-            sizes="(max-width: 600px) 100vw,   
-                   (max-width: 900px) 50vw,   
-                   33vw"   
-            alt="Description of the image">
+            <picture>
+                <source srcset="images/paris-small.webp" media="(max-width: 600px)">
+                <source srcset="images/paris-medium.webp" media="(max-width: 900px)">
+                <img src="images/paris-large.webp" alt="Paris City View">
+            </picture>
         </section>
 
         <section class="weather">
