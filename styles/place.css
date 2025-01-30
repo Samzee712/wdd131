@@ -1,17 +1,26 @@
+/* Global CSS Variables */
+:root {
+    --primary-color: #003366; /* Darker blue for better contrast */
+    --secondary-color: #D32F2F; /* Darker red for better contrast */
+    --background-color: #FFFFFF; /* White background for better contrast */
+    --text-color: #000000; /* Black text for better contrast */
+    --footer-background: #1A1A1A; /* Dark grey for footer background */
+    --footer-text: #FFFFFF; /* White text for footer */
+}
 
-/* Global Styles */
+/* General Styling */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /* Apply Google Font */
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     text-align: center;
-    font-weight: 200;
 }
 
 header {
-    background: #2c3e50;
-    color: white;
+    background: var(--footer-background);
+    color: var(--footer-text);
     padding: 20px;
     font-weight: bold;
 }
@@ -65,14 +74,22 @@ main {
 .weather p {
     font-size: 1.2em;
 }
+
 .weather img {
     width: 50px;
     height: auto;
 }
 
+.weather::after {
+    content: url('images/weather_icon.svg');
+    display: block;
+    margin-top: 10px;
+}
+
+/* Footer */
 footer {
-    background: #2c3e50;
-    color: white;
+    background: var(--footer-background);
+    color: var(--footer-text);
     padding: 10px;
     margin-top: 20px;
 }
@@ -80,10 +97,15 @@ footer {
 /* Responsive Layout */
 @media screen and (max-width: 600px) {
     main {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "image"
-            "data"
-            "weather";
+        flex-direction: column;
+        align-items: center;
     }
+}
+
+h2 {
+    color: var(--primary-color);
+}
+
+p {
+    line-height: 1.6;
 }

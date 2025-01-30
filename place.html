@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="WDD 131 - Interactive and Responsive Web Page of Paris, France">
     <meta name="author" content="Samuel David">
-    <title>Paris, France</title>
+    <title>Paris, France - Interactive & Responsive Page</title>
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -31,7 +31,12 @@
         </section>
 
         <section class="image">
-            <img src="images/paris.webp" alt="Paris City View">
+            <img src="images/paris.webp"   
+            srcset="images/paris.webp"   
+            sizes="(max-width: 600px) 100vw,   
+                   (max-width: 900px) 50vw,   
+                   33vw"   
+            alt="Description of the image">
         </section>
 
         <section class="weather">
@@ -39,7 +44,7 @@
             <img src="images/weather_clouds.svg" alt="Weather Icon">
             <p><strong>Temperature:</strong> <span id="temperature">40</span>°F</p>
             <p><strong>Wind Speed:</strong> <span id="windSpeed">5</span> mph</p>
-            <p><strong>Wind Chill:</strong> <span id="windChill"></span></p>
+            <p><strong>Wind Chill:</strong> <span id="windChill">N/A</span></p>
         </section>
     </main>
 
