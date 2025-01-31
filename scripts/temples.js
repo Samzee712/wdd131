@@ -1,12 +1,18 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Dynamic year in footer
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-document.getElementById("currentYear").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+    // Last modified date
+    document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
 
-// Hamburger Menu Toggle
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
+    // Mobile Navigation Toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
 
-menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("visible");
-    menuToggle.textContent = navMenu.classList.contains("visible") ? "✖" : "☰";
+    menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("visible");
+        const expanded = navMenu.classList.contains("visible");
+        menuToggle.setAttribute("aria-expanded", expanded);
+        menuToggle.textContent = expanded ? "✖" : "☰";
+    });
 });

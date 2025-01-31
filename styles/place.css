@@ -1,16 +1,16 @@
 /* Global CSS Variables */
 :root {
-    --primary-color: #003366; /* Darker blue for better contrast */
-    --secondary-color: #D32F2F; /* Darker red for better contrast */
-    --background-color: #FFFFFF; /* White background for better contrast */
-    --text-color: #000000; /* Black text for better contrast */
-    --footer-background: #1A1A1A; /* Dark grey for footer background */
-    --footer-text: #FFFFFF; /* White text for footer */
+    --primary-color: #003366;
+    --secondary-color: #D32F2F;
+    --background-color: #FFFFFF;
+    --text-color: #000000;
+    --footer-background: #1A1A1A;
+    --footer-text: #FFFFFF;
 }
 
 /* General Styling */
 body {
-    font-family: 'Roboto', sans-serif; /* Apply Google Font */
+    font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
@@ -30,60 +30,37 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    gap: 20px;
 }
 
-.data {
-    background: #ffffff;
+/* Improved Proximity & Alignment */
+.data, .weather {
+    background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 10px;
     max-width: 300px;
     text-align: left;
 }
 
-.image {
-    grid-area: image;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-.image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.weather {
-    background: #3498db;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 10px;
-    max-width: 300px;
-    font-weight: bold;
-}
-
-.weather h2 {
-    margin-top: 0;
-}
-
-.weather p {
-    font-size: 1.2em;
-}
-
 .weather img {
     width: 50px;
-    height: auto;
+    display: block;
+    margin: 10px auto;
 }
 
+/* Pseudo-Element Emoticon */
 .weather::after {
-    content: url('images/weather_icon.svg');
-    display: block;
-    margin-top: 10px;
+    content: " ☀️";
+    display: none;
+    font-size: 1.5rem;
+}
+
+/* Display Emoticon in Desktop View */
+@media screen and (min-width: 900px) {
+    .weather::after {
+        display: inline;
+    }
 }
 
 /* Footer */
@@ -104,8 +81,4 @@ footer {
 
 h2 {
     color: var(--primary-color);
-}
-
-p {
-    line-height: 1.6;
 }

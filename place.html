@@ -32,8 +32,8 @@
 
         <section class="image">
             <picture>
-                <source srcset="images/paris-large.webp" media="(max-width: 600px)">
-                <source srcset="images/paris-medium.webp" media="(max-width: 900px)">
+                <source srcset="images/paris-large.webp" media="(min-width: 900px)">
+                <source srcset="images/paris-medium.webp" media="(min-width: 600px)">
                 <img src="images/paris.webp" alt="Paris City View">
             </picture>
         </section>
@@ -48,12 +48,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Samuel David - Calabar, Nigeria</p>
+        <p>&copy; <span id="currentYear"></span> Samuel David - Calabar, Nigeria</p>
         <p>Last modified: <span id="lastModified"></span></p>
     </footer>
-
-    <script>
-        document.getElementById('lastModified').textContent = document.lastModified;
-    </script>
 </body>
 </html>
