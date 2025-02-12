@@ -3,20 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the beautiful collection of LDS temples worldwide. A responsive picture album project for WDD 131.">
-    <meta name="author" content="Samuel David">
+    <meta name="description" content="Explore the LDS Temples Collection. View temples from around the world with responsive design and accessibility features.">
     <title>Temple Album - LDS Temples Collection</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
-    <script src="scripts/temples.js" defer></script>
+    <link rel="stylesheet" href="temples.css">
+    <script src="temples.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Temple Album - LDS Temples</h1>
-        <button id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+        <button id="menuToggle" aria-label="Toggle navigation">☰</button>
         <nav>
             <ul id="navMenu">
                 <li><a href="#">Home</a></li>
@@ -26,81 +20,51 @@
                 <li><a href="#">Small</a></li>
             </ul>
         </nav>
+        <h1>Temple Album - LDS Temples Collection</h1>
     </header>
+
     <main>
-        <h2>Temple Collection</h2>
-        <div class="gallery">
+        <section class="gallery">
             <figure>
-                <picture>
-                    <source srcset="images/aba_nigeria_temple_lds.webp" media="(min-width: 1024px)">
-                    <source srcset="images/aba_nigeria_temple_lds.webp" media="(min-width: 600px)">
-                    <img src="images/aba_nigeria_temple_lds.webp" alt="Aba Nigeria LDS Temple">
-                </picture>
+                <img src="images/aba_nigeria_temple_lds.webp" alt="Aba Nigeria LDS Temple">
                 <figcaption>Aba Nigeria LDS Temple</figcaption>
             </figure>
             <figure>
-                <picture>
-                    <source srcset="images/accra_ghana_temple_lds.webp" media="(min-width: 1024px)">
-                    <source srcset="images/accra_ghana_temple_lds.webp" media="(min-width: 600px)">
-                    <img src="images/accra_ghana_temple_lds.webp" alt="accra_ghana_temple_lds">
-                </picture>
-                <figcaption>accra ghana temple lds</figcaption>
+                <img src="images/accra_ghana_temple_lds.webp" alt="Accra Ghana LDS Temple">
+                <figcaption>Accra Ghana LDS Temple</figcaption>
             </figure>
             <figure>
-                <picture>
-                    <source srcset="images/adelaide_australia_temple_lds.webp" media="(min-width: 1024px)">
-                    <source srcset="images/adelaide_australia_temple_lds.webp" media="(min-width: 600px)">
-                    <img src="images/adelaide_australia_temple_lds.webp" alt="adelaide australia temple lds">
-                </picture>
-                <figcaption>adelaide australia temple lds</figcaption>
+                <img src="images/adelaide_australia_temple_lds.webp" alt="Adelaide Australia LDS Temple">
+                <figcaption>Adelaide Australia LDS Temple</figcaption>
             </figure>
             <figure>
-                <picture>
-                    <source srcset="images/albuquerque_temple_lds.webp" media="(min-width: 1024px)">
-                    <source srcset="images/albuquerque_temple_lds.webp" media="(min-width: 600px)">
-                    <img src="images/albuquerque_temple_lds.webp" alt="albuquerque temple lds">
-                </picture>
-                <figcaption>albuquerque temple lds</figcaption>
+                <img src="images/albuquerque_temple_lds.webp" alt="Albuquerque LDS Temple">
+                <figcaption>Albuquerque LDS Temple</figcaption>
             </figure>
             <figure>
-                <picture>
-                    <source srcset="images/anchorage_temple_lds.webp" media="(min-width: 1024px)">
-                    <source srcset="images/anchorage_temple_lds.webp" media="(min-width: 600px)">
-                    <img src="images/anchorage_temple_lds.webp" alt="anchorage temple lds">
-                </picture>
-                <figcaption>anchorage_temple_lds</figcaption>
+                <img src="images/anchorage_temple_lds.webp" alt="Anchorage LDS Temple">
+                <figcaption>Anchorage LDS Temple</figcaption>
             </figure>
             <figure>
-                <picture>
-                    <source srcset="images/atlanta_georgia_temple_sunset.webp" media="(min-width: 1024px)">
-                    <source srcset="images/atlanta_georgia_temple_sunset.webp" media="(min-width: 600px)">
-                    <img src="images/atlanta_georgia_temple_sunset.webp" alt="atlanta georgia temple sunset">
-                </picture>
-                <figcaption>atlanta_georgia_temple_sunset</figcaption>
+                <img src="images/atlanta_georgia_temple_sunset.webp" alt="Atlanta Georgia LDS Temple at sunset">
+                <figcaption>Atlanta Georgia LDS Temple</figcaption>
             </figure>
             <figure>
-                <picture>
-                    <source srcset="images/paraguay_temple.webp" media="(min-width: 1024px)">
-                    <source srcset="images/paraguay_temple.webp" media="(min-width: 600px)">
-                    <img src="images/paraguay_temple.webp" alt="paraguay_temple">
-                </picture>
-                <figcaption>paraguay_temple</figcaption>
+                <img src="images/paraguay_temple.webp" alt="Paraguay LDS Temple">
+                <figcaption>Paraguay LDS Temple</figcaption>
             </figure>
             <figure>
-                <picture>
-                    <source srcset="images/rendering_abidjan_ivory_coast_temple.webp" media="(min-width: 1024px)">
-                    <source srcset="images/rendering_abidjan_ivory_coast_temple.webp" media="(min-width: 600px)">
-                    <img src="images/rendering_abidjan_ivory_coast_temple.webp" alt="rendering_abidjan_ivory_coast_temple">
-                </picture>
-                <figcaption>rendering_abidjan_ivory_coast_temple</figcaption>
+                <img src="images/rendering_abidjan_ivory_coast_temple.webp" alt="Rendering of Abidjan Ivory Coast LDS Temple">
+                <figcaption>Abidjan Ivory Coast LDS Temple</figcaption>
             </figure>
-            
-            
-        </div>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; <span id="currentYear"></span> Samuel David | Calabar, Nigeria</p>
-        <p id="lastModified"></p>
+        <p>&copy; <span id="copyrightYear"></span> | Samuel David | Calabar, Nigeria</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
+
+    
 </body>
 </html>

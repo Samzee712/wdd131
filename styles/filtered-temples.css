@@ -15,7 +15,7 @@ body {
 header {
     background-color: var(--primary-color);
     color: white;
-    padding: 15px 0;
+    padding: 15px;
     text-align: center;
 }
 
@@ -30,7 +30,7 @@ header {
 }
 
 nav ul {
-    display: flex;
+    display: none;
     flex-direction: column;
     background: var(--primary-color);
     padding: 10px;
@@ -39,7 +39,6 @@ nav ul {
     right: 0;
     width: 200px;
     list-style: none;
-    justify-content: center;
 }
 
 nav ul.visible {
@@ -50,19 +49,19 @@ nav ul li {
     padding: 10px;
 }
 
-nav ul li a {
+nav ul li button {
+    background: none;
+    border: none;
     color: white;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
-nav ul li a:hover {
-    background-color: var(--secondary-color);
-    border-radius: 5px;
+nav ul li button:hover {
+    color: var(--secondary-color);
 }
 
-/* Image Gallery */
+/* Temple Cards */
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
@@ -70,15 +69,30 @@ nav ul li a:hover {
     padding: 20px;
 }
 
-figure {
+.temple-card {
     text-align: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-figure img {
+.temple-card img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fade 15s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100%, 90% {
+        opacity: 1;
+    }
 }
 
 footer {

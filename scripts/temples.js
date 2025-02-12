@@ -1,10 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Dynamic year in footer
+    // Footer Year and Last Modified Date
     document.getElementById("currentYear").textContent = new Date().getFullYear();
-
-    // Last modified date
-    document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
-
+    document.getElementById("lastModified").textContent = document.lastModified;
     // Mobile Navigation Toggle
     const menuToggle = document.getElementById("menuToggle");
     const navMenu = document.getElementById("navMenu");
