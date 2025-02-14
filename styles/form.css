@@ -1,70 +1,74 @@
-/* 🎨 Global Variables */
+/* Root Variables */
 :root {
-    --primary-color: #2c3e50;  /* Dark blue */
-    --secondary-color: #3498db; /* Light blue */
-    --background-color: #f4f4f4; /* Light gray */
-    --text-color: #333;  /* Dark gray */
+    --primary-bg: #dacbd6; /* Light purple background */
+    --primary-text: #333;
+    --primary-color: #2c3e50; /* Header and footer color */
+    --button-color: #4a235a; /* Button background */
+    --button-hover: #6a1b9a;
+    --input-bg: #fff;
     --border-color: #ccc;
-    --border-radius: 10px;
-    --padding: 15px 0;
-    --font-family: 'Roboto', sans-serif;
+    --shadow: rgba(0, 0, 0, 0.2);
 }
 
-/* 🌍 General Styling */
+/* General Styling */
 body {
-    font-family: var(--font-family);
-    background-color: var(--background-color);
-    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
     margin: 0;
     padding: 0;
 }
 
-/* 🔵 Header */
+/* Header */
 header {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: var(--padding);
+    padding: 15px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-/* 📏 Main Form Container */
+/* Main Container */
 main {
     width: 90%;
-    max-width: 600px;
+    max-width: 500px;
     margin: 20px auto;
-    background: white;
-    padding: var(--padding);
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: var(--input-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow);
 }
 
-/* 📋 Form Styling */
+/* Form Styling */
 form {
     display: flex;
     flex-direction: column;
 }
 
-/* 🏷️ Form Labels */
+/* Labels */
 label {
     font-weight: bold;
     margin-top: 10px;
+    display: block;
 }
 
-/* 📝 Inputs, Select, Textarea */
+/* Inputs, Select, Textarea */
 input, select, textarea {
     width: 100%;
-    padding: var(--padding);
+    padding: 10px;
     margin: 5px 0;
     border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    font-family: var(--font-family);
+    border-radius: 5px;
+    background-color: var(--input-bg);
 }
 
-/* ⭐ Star Rating */
+/*  ⭐ Star Rating */
 .rating {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center
 }
 
 .rating input {
@@ -81,43 +85,55 @@ input, select, textarea {
     color: gold;
 }
 
-/* 🚀 Submit Button */
+
+
+/* Checkboxes */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Submit Button */
 input[type="submit"] {
-    background-color: var(--secondary-color);
+    background-color: var(--button-color);
     color: white;
     border: none;
-    padding: var(--padding);
+    padding: 12px;
     cursor: pointer;
-    margin-top: 15px;
-    border-radius: var(--border-radius);
     font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-transform: uppercase;
 }
 
 input[type="submit"]:hover {
-    background-color: #2980b9;
+    background-color: var(--button-hover);
 }
 
-/* 📌 Footer */
+/* Footer */
 footer {
     text-align: center;
     margin-top: 20px;
-    padding: var(--padding);
+    padding: 10px;
     background-color: var(--primary-color);
     color: white;
 }
 
-/* 📱 Responsive Design */
-@media screen and (max-width: 480px) {
+/* Responsiveness */
+@media (max-width: 600px) {
     main {
-        max-width: 100%;
-        padding: 10px;
+        width: 95%;
     }
 
     .rating label {
-        font-size: 20px;
-    }
-
-    input, select, textarea {
-        font-size: 1rem;
+        font-size: 22px;
     }
 }
